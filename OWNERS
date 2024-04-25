@@ -1,2 +1,6 @@
-reviewers:
-- pipeline-reviewers
+filters:
+  .*:
+    approvers:
+      - approvers
+    reviewers:
+      - reviewers
