@@ -1,3 +1,6 @@
-reviewers:
-- pipeline-reviewers
-- enarha
+filters:
+  .*:
+    approvers:
+      - approvers
+    reviewers:
+      - reviewers
