@@ -36,6 +36,8 @@ spec:
       - name: revision
       - name: event_type
       - name: pull_request_number
+      - name: source_branch
+      - name: target_branch
     tasks:
       - name: sometask
         taskSpec:
@@ -49,4 +51,6 @@ spec:
                 echo "revision: $(params.revision)"
                 echo "event: $(params.event_type)"
                 echo "PRnum: $(params.pull_request_number)"
+                echo "SourceBranch: $(params.source_branch)"
+                echo "TargetBranch: $(params.target_branch)"
                 echo "######################"
