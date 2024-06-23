@@ -7,14 +7,14 @@ metadata:
     # The event we are targeting as seen from the webhook payload
     # this can be an array too, i.e: [pull_request, push]
     #pipelinesascode.tekton.dev/on-event: "[pull_request, push]"
-    pipelinesascode.tekton.dev/on-event: "[incoming, pull_request]"
+    pipelinesascode.tekton.dev/on-event: "[incoming, pull_request, push]"
 
     # The branch or tag we are targeting (ie: main, refs/tags/*)
     # pipelinesascode.tekton.dev/on-target-branch: "[main]"
     pipelinesascode.tekton.dev/on-target-branch: "[refs/heads/*]"
 
     # how many runs we want to keep attached to this event
-    pipelinesascode.tekton.dev/max-keep-runs: "3"
+    pipelinesascode.tekton.dev/max-keep-runs: "5"
 spec:
   params:
     # The variable with brackets are special to Pipelines as Code
