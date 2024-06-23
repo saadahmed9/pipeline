@@ -30,7 +30,8 @@ spec:
     - name: source_branch
       value: "{{ source_branch }}"
     - name: target_branch
-  pipelineSpec: "{{ target_branch }}"
+      value: "{{ target_branch }}"
+  pipelineSpec:
     params:
       - name: repo_url
       - name: revision
