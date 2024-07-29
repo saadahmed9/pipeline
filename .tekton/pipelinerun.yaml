@@ -31,6 +31,8 @@ spec:
       value: "{{ source_branch }}"
     - name: target_branch
       value: "{{ target_branch }}"
+    - name: source_url
+      value: "{{ source_url }}"
   pipelineSpec:
     params:
       - name: repo_url
@@ -39,6 +41,7 @@ spec:
       - name: pull_request_number
       - name: source_branch
       - name: target_branch
+      - name: source_url
     tasks:
       - name: sometask
         taskSpec:
@@ -54,4 +57,5 @@ spec:
                 echo "PRnum: $(params.pull_request_number)"
                 echo "SourceBranch: $(params.source_branch)"
                 echo "TargetBranch: $(params.target_branch)"
+                echo "SourceUrl: $(params.source_url)"
                 echo "######################"
